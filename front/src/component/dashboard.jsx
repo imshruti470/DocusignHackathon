@@ -1,22 +1,25 @@
-// src/components/Dashboard.js
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import ContractUpload from './contractUpload';
+
 const Dashboard = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-800">
-      
-
-      <main className="p-6">
+    <div className="min-h-screen bg-gray-100 text-gray-800 flex flex-col">
+      {/* Main Content */}
+      <main className="p-6 flex-grow">
         <section className="mb-6">
           <h2 className="text-2xl font-semibold">Welcome to the Dashboard</h2>
-          <p className="mt-2">Quickly upload contracts for analysis or explore insights from previously analyzed contracts.</p>
+          <p className="mt-2">
+            Quickly upload contracts for analysis or explore insights from previously analyzed contracts.
+          </p>
         </section>
 
-        <ContractUpload /> {/* Add the ContractUpload component here */}
+        {/* Contract Upload Section */}
+        <ContractUpload />
 
+        {/* Quick Links Section */}
         <section>
           <h3 className="text-xl font-semibold">Quick Links</h3>
           <nav className="mt-4">
@@ -49,8 +52,6 @@ const Dashboard = () => {
           </nav>
         </section>
       </main>
-
-      
     </div>
   );
 };
