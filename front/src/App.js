@@ -6,6 +6,8 @@ import Header from './component/header';
 import Footer from './component/footer';
 import DetailedRiskInsights from './component/detailedriskInsights';
 import HelpFaq from './component/helpfaq';
+import SignUp from './component/signup';
+import Login from './component/login';
 
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
         <Route path="/results" element={<AnalysisResults/>} />
         <Route path="/insights" element={ <DetailedRiskInsights/>} />
         <Route path="/help" element={ <HelpFaq/>} />
+        <Route path="/signup" component={SignUp} />
+        <Route path="/login" component={Login} />
       </Routes>
       <Footer/>
     </BrowserRouter>
